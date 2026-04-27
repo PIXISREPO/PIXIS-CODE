@@ -1,0 +1,41 @@
+# INITIALISATION SEQUENCE - DO NOT MODIFY - This init sequence has been tested on Waveshare SKU27579 in Landscape Mode only. For Waveshare SKU27579 in Portrait Mode use st7789t3p.bin. Use on other Displays at own risk as settings are not generic and YMMV. 
+
+delay 120
+command 0x11                            # Sleep out
+delay 120
+command 0x13                            # Normal display mode on
+command 0x36 0x00
+command 0xB6 0x0A 0x82
+command 0xB0 0x00 0xE0
+command 0x3A 0x55
+delay 10
+command 0xB2 0x0C 0x0C 0x00 0x33 0x33   # porch control
+command 0xB7 0x35
+command 0xBB 0x28
+command 0xC0 0x0C
+command 0xC2 0x01 0xFF
+command 0xC3 0x10
+command 0xC4 0x20
+command 0xC6 0x0F                       # frame rate control
+command 0xD0 0xA4 0xA1
+command 0xE0 0xD0 0x00 0x02 0x07 0x0A 0x28 0x32 0x44 0x42 0x06 0x0E 0x12 0x14 0x17 # sets display gamma
+command 0xE1 0xD0 0x00 0x02 0x07 0x0A 0x28 0x31 0x54 0x47 0x0E 0x1C 0x17 0x1B 0x1E
+command 0x21
+
+# WIDTH / HEIGHT CONFIG - The final hexadecimal value represents the display width and height 
+command 0x2A 0x00 0x00 0x00 0x3F        # config param is width=320, width-mm=
+command 0x2B 0x00 0x00 0x01 0xEF        # config param is height=240, height-mm=
+delay 120
+command 0x29
+delay 120
+
+# DISPLAY INITIALISATION COMPLETE - Add other options such as rotation and mirroring below:
+
+command 0x36 0xBC           # MADCTL, see p. 215 of ST7789T3 datasheet, makes screen landscape
+            
+        # You will find configuration options that allow you to
+	# reverse the order of registers, which can mirror the image,
+	# or rotation can be achieved through combinations of these bits.
+	# 0x36 0xBC for landscape
+	# 0x36 0x08 for portrait
+	# Make sure to swap the width and height hex here and also in the config
