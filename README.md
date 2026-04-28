@@ -7,4 +7,4 @@ The .txt files are guides you may edit to help you create new binaries should yo
 
 Follow the instructions in LCDconfigs.txt and edit your config.txt file.
 
-Thanks to Isaac and Kieran at Ideas On Board for providing these files.
+Thanks to Isaac and Kieran at Ideas On Board and Linuxembedded for providing these files.
