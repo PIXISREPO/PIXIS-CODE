@@ -17,6 +17,7 @@ dtparam=reset-gpio=27,dc-gpio=25,backlight-gpio=18
 
 
 
+
 #For st7789vp Portrait 2.8inch Waveshare SKU 27579 use
 
 dtoverlay=mipi-dbi-spi,speed=48000000
