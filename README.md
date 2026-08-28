@@ -6,12 +6,14 @@ Download the drivers for Landscape (st7789vl.bin) and Portrait (st7789vp.bin) sc
 Follow the instructions in LCDconfigs.txt to edit your config.txt file. They will tell you to add these lines in config.txt under the [all] section  
 
 #For st7789vl Landscape 2.8inch Waveshare SKU 27579 use
+
 dtoverlay=mipi-dbi-spi,speed=48000000
 dtparam=compatible=st7789vl\0panel-mipi-dbi-spi
 dtparam=width=320,height=240,width-mm=59,height-mm=44
 dtparam=reset-gpio=27,dc-gpio=25,backlight-gpio=18
 
 #For st7789vp Portrait 2.8inch Waveshare SKU 27579 use
+
 dtoverlay=mipi-dbi-spi,speed=48000000
 dtparam=compatible=st7789vp\0panel-mipi-dbi-spi
 dtparam=width=240,height=320,width-mm=44,height-mm=59
