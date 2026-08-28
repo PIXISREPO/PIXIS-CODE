@@ -1,7 +1,7 @@
 # PIXIS-CODE
 Drivers and Utilities for the PIXIS Project
 
-Select the appropriate driver for Landscape (st7789vl.bin) or Portrait (st7789vp.bin) screen orientation and place the LCD binary driver in your /usr/lib/firmware directory. If you are using an OS other than Raspberry Pi Debian then copy the driver into the appropriate directory. 
+Download the appropriate driver for Landscape (st7789vl.bin) or Portrait (st7789vp.bin) screen orientation and copy the bin file to your /usr/lib/firmware directory. If you are using an OS other than Raspberry Pi Debian then copy the driver into the appropriate directory. 
 
 Follow the instructions in LCDconfigs.txt to edit your config.txt file. Add these lines under the [all] section  
 
