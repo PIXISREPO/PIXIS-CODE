@@ -8,16 +8,23 @@ Follow the instructions in LCDconfigs.txt to edit your config.txt file. They wil
 #For st7789vl Landscape 2.8inch Waveshare SKU 27579 use
 
 dtoverlay=mipi-dbi-spi,speed=48000000
+
 dtparam=compatible=st7789vl\0panel-mipi-dbi-spi
+
 dtparam=width=320,height=240,width-mm=59,height-mm=44
+
 dtparam=reset-gpio=27,dc-gpio=25,backlight-gpio=18
 
 #For st7789vp Portrait 2.8inch Waveshare SKU 27579 use
 
 dtoverlay=mipi-dbi-spi,speed=48000000
+
 dtparam=compatible=st7789vp\0panel-mipi-dbi-spi
+
 dtparam=width=240,height=320,width-mm=44,height-mm=59
+
 dtparam=reset-gpio=27,dc-gpio=25,backlight-gpio=18
+
 
 Comment out the Portrait lines if using Landscape or comment out the Landscape lines if using Portrait.
 
